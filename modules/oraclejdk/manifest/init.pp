@@ -120,6 +120,7 @@ class oraclejdk {
 
     package { 'oracle-java8-installer':
       ensure => installed,
+      require => Package['debconf'],
     }
 
     package { 'oracle-java8-set-default':
