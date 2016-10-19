@@ -2,6 +2,10 @@
 class oraclejdk {
 
   if $::operatingsystem == 'Debian' and $::architecture == 'amd64' {
+    package { "debconf-utils":
+      ensure => installed
+    }
+
     apt::pin { 'oracle-java6-installer':
       ensure   => present,
       packages => 'oracle-java6-installer',
