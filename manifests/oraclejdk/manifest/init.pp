@@ -125,6 +125,7 @@ class oraclejdk {
     package { 'oracle-java8-installer':
       ensure => installed,
       require => Package['debconf'],
+      require => Apt_Source['webupd8team-source'],
     }
 
     package { 'oracle-java8-set-default':
