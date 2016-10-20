@@ -111,6 +111,7 @@ class oraclejdk {
         'deb' => true,
       },
       require  => Apt_Key['webupd8team-key'],
+      before => Exec['accept-oracle-java8-license'],
     }
 
     # lint:ignore:80chars
@@ -125,7 +126,6 @@ class oraclejdk {
     package { 'oracle-java8-installer':
       ensure => installed,
       require => Package['debconf'],
-      require => Apt_Source['webupd8team-source'],
     }
 
     package { 'oracle-java8-set-default':
