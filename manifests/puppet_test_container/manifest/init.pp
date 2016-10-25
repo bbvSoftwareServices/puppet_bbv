@@ -8,20 +8,20 @@ class puppet_test_container {
     timeout => 10,
     verbose => false,
     cache_dir => '/var/cache/wget',
-    before => 'copyfile',
+    before => File['copyfile'],
   }
 
   file {'copyfile':
     ensure => absent,
     path => '/opt/bbv/puppettestcontainer-0.0.1.jar',
     source => '/tmp/puppettestcontainer-0.0.1.jar',
-    before => '/etc/init.d/puppettestcontainer',
+    before => File['/etc/init.d/puppettestcontainer'],
   }
 
   file { '/etc/init.d/puppettestcontainer':
     ensure => 'link',
     target => '/opt/bbv/puppettestcontainer-0.0.1.jar',
-    before => 'puppettestcontainer',
+    before => Service['puppettestcontainer'],
   }
 
   service { 'puppettestcontainer':
