@@ -8,7 +8,7 @@ class puppet_test_container {
     timeout => 0,
     verbose => true,
     cache_dir => '/var/cache/wget',
-    before => File['copyfile'],
+    before => File['/opt/bbv/puppettestcontainer-0.0.1.jar'],
   }
 
   file {'/opt/bbv':
