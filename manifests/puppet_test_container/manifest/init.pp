@@ -30,6 +30,8 @@ class puppet_test_container {
   service { 'puppettestcontainer':
     ensure => running,
     enable => true,
+    start => '/etc/init.d/puppettestcontainer start',
+    stop => '/etc/init.d/puppettestcontainer stop',
     require => File["/etc/init.d/puppettestcontainer"],
 
   }
