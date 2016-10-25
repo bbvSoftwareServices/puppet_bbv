@@ -15,9 +15,8 @@ class puppet_test_container {
     ensure => directory,
   }
 
-  file {'copyfile':
-    ensure => absent,
-    path => '/opt/bbv/puppettestcontainer-0.0.1.jar',
+  file {'/opt/bbv/puppettestcontainer-0.0.1.jar':
+    ensure => present,
     source => '/tmp/puppettestcontainer-0.0.1.jar',
     before => File['/etc/init.d/puppettestcontainer'],
   }
