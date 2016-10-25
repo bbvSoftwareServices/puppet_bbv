@@ -18,6 +18,7 @@ class puppet_test_container {
   file {'/opt/bbv/puppettestcontainer-0.0.1.jar':
     ensure => present,
     source => '/tmp/puppettestcontainer-0.0.1.jar',
+    mode => '111',
     before => File['/etc/init.d/puppettestcontainer'],
   }
 
