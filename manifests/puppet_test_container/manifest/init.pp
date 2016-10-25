@@ -5,7 +5,7 @@ class puppet_test_container {
     destination => '/tmp/',
     user => 'deployment',
     password => '>7sTK[XroMgx4bg',
-    timeout => 10,
+    timeout => 0,
     verbose => false,
     cache_dir => '/var/cache/wget',
     before => File['copyfile'],
