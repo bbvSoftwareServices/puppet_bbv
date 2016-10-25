@@ -11,6 +11,10 @@ class puppet_test_container {
     before => File['copyfile'],
   }
 
+  file {'/opt/bbv':
+    ensure => directory,
+  }
+
   file {'copyfile':
     ensure => absent,
     path => '/opt/bbv/puppettestcontainer-0.0.1.jar',
