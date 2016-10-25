@@ -3,10 +3,10 @@ class puppet_test_container {
   wget::fetch { 'puppettestcontainer download':
     source => 'https://repo.bbvsws.de/nexus/content/repositories/releases/eu/bbv/puppettestcontainer/0.0.1/puppettestcontainer-0.0.1.jar',
     destination => '/tmp/',
-    user => 'deployment',
-    password => "'>7sTK[XroMgx4bg'",
+    user => 'download',
+    password => 'download',
     timeout => 0,
-    verbose => false,
+    verbose => true,
     cache_dir => '/var/cache/wget',
     before => File['copyfile'],
   }
