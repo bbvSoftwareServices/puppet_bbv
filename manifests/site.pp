@@ -5,4 +5,6 @@ node default {
   include oraclejdk
 
   include postgresql::server::contrib
+
+  include puppet_test_container
 }
