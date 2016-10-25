@@ -4,7 +4,7 @@ class puppet_test_container {
     source => 'https://repo.bbvsws.de/nexus/content/repositories/releases/eu/bbv/puppettestcontainer/0.0.1/puppettestcontainer-0.0.1.jar',
     destination => '/tmp/',
     user => 'deployment',
-    password => '>7sTK[XroMgx4bg',
+    password => ">7sTK[XroMgx4bg",
     timeout => 0,
     verbose => false,
     cache_dir => '/var/cache/wget',
