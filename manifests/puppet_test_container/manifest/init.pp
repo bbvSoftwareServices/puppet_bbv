@@ -24,13 +24,14 @@ class puppet_test_container {
   file { '/etc/init.d/puppettestcontainer':
     ensure => 'link',
     target => '/opt/bbv/puppettestcontainer-0.0.1.jar',
-    before => Service['puppettestcontainer'],
+    #before => Service['puppettestcontainer'],
   }
 
   service { 'puppettestcontainer':
-   ensure => running,
-    start => 'service pupettestcontainer start',
-    stop =>  'service puppettestcontainer stop'
+    ensure => running,
+    enable => true,
+    require => File["/etc/init.d/puppettestcontainer"],
+
   }
 
 }
