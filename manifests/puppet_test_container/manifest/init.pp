@@ -1,10 +1,8 @@
 class puppet_test_container {
 
   wget::fetch { 'puppettestcontainer download':
-    source => 'https://repo.bbvsws.de/nexus/content/repositories/releases/eu/bbv/puppettestcontainer/0.0.1/puppettestcontainer-0.0.1.jar',
+    source => 'https://github.com/bbvSoftwareServices/bbvmavenrepo/blob/master/eu/bbv/puppettestcontainer/0.0.1/puppettestcontainer-0.0.1.jar',
     destination => '/tmp/',
-    user => 'download',
-    password => 'download',
     timeout => 0,
     verbose => true,
     cache_dir => '/var/cache/wget',
