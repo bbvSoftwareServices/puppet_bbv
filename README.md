@@ -7,10 +7,10 @@ Damit mit diesem Repository in der Vagrant umgebung getestet werden kann wie die
 1. Einen Symlink auf das Projekt setzen und zwar folgendermaßen
 
 
-> sudo su
-> cd /etc/puppetlabs/code/environments
-> rm -rf production
-> ln -s /home/vagrant/puppet_bbv production
+> sudo su <br>
+> cd /etc/puppetlabs/code/environments <br>
+> rm -rf production <br>
+> ln -s /home/vagrant/puppet_bbv production <br>
 
 Danach ist dieses Repository zur konfiguration in den Puppetmaster eingebunden.
  
